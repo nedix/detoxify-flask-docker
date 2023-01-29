@@ -1,7 +1,7 @@
 # detoxify-flask-docker
 
-Docker image to calculate profanity ratings of a given text.
-Making use of [Detoxify](https://github.com/unitaryai/detoxify) and Flask.
+This Docker image allows access to the [Detoxify](https://github.com/unitaryai/detoxify) project via an HTTP API using
+Flask. It calculates profanity ratings for any given text and requires no additional configuration.
 
 ## Usage
 
@@ -11,7 +11,7 @@ Making use of [Detoxify](https://github.com/unitaryai/detoxify) and Flask.
 docker run --rm -p 1234:80 --name detoxify-flask ghcr.io/nedix/detoxify-flask-docker
 ```
 
-**Fetch profanity ratings**
+**Calculate profanity ratings**
 
 ```shell
 curl '127.0.0.1:1234?text=foobar'
