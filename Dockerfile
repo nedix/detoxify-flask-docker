@@ -21,7 +21,7 @@ RUN apt update \
     && apt remove --purge -y $BUILD_DEPS
 
 RUN echo "Warming up" \
-    && python -c "from detoxify import Detoxify; Detoxify('original').predict('Hello world!')"
+    && python -c "from detoxify import Detoxify; Detoxify('multilingual').predict('Hello world!')"
 
 ADD rootfs /
 
