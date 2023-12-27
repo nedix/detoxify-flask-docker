@@ -23,9 +23,7 @@ RUN apt update \
 RUN echo "Warming up" \
     && python -c "from detoxify import Detoxify; Detoxify('multilingual').predict('Hello world!')"
 
-ADD rootfs /
-
-RUN chmod +x /entrypoint.py
+COPY --chown=nobody rootfs /
 
 ENTRYPOINT ["/entrypoint.py"]
 
