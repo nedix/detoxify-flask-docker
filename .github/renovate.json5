@@ -38,5 +38,12 @@
       datasourceTemplate: "pypi",
       depNameTemplate: "torch",
     },
-  ]
+  ],
+  packageRules: [
+    {
+      description: "Disable grouping for regex managed dependencies",
+      matchDepTypes: ["regex"],
+      groupName: null
+    }
+  ],
 }
