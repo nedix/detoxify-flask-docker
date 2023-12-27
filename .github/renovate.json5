@@ -10,8 +10,9 @@
     {
       fileMatch: ["^Dockerfile$"],
       matchStrings: ["ARG DEBIAN_VERSION=(?<currentValue>.*?)\\n"],
-      datasourceTemplate: "debian",
+      datasourceTemplate: "docker",
       depNameTemplate: "debian",
+      versioningTemplate: "debian",
     },
     {
       fileMatch: ["^Dockerfile$"],
