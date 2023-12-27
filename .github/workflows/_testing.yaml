@@ -17,7 +17,8 @@ jobs:
         with:
           ref: ${{ steps.extract-ref.outputs.ref }}
 
-      - name: Build images and run tests
+      - name: Build image and run tests
         shell: bash
         run: |
+          docker build . -t detoxify-flask-test
           ./tests/e2e/index.sh

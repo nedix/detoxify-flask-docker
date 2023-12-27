@@ -22,9 +22,21 @@
     },
     {
       fileMatch: ["^Dockerfile$"],
+      matchStrings: ["ARG FLASK_VERSION=(?<currentValue>.*?)\\n"],
+      datasourceTemplate: "pypi",
+      depNameTemplate: "flask",
+    },
+    {
+      fileMatch: ["^Dockerfile$"],
       matchStrings: ["ARG PYTHON_VERSION=(?<currentValue>.*?)\\n"],
       datasourceTemplate: "docker",
       depNameTemplate: "python",
-    }
+    },
+    {
+      fileMatch: ["^Dockerfile$"],
+      matchStrings: ["ARG TORCH_VERSION=(?<currentValue>.*?)\\n"],
+      datasourceTemplate: "pypi",
+      depNameTemplate: "torch",
+    },
   ]
 }

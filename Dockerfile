@@ -1,29 +1,35 @@
 ARG DEBIAN_VERSION=bookworm
 ARG DETOXIFY_VERSION=0.5.1
-ARG PYTHON_VERSION=3.12
+ARG FLASK_VERSION=2.2.2
+ARG PYTHON_VERSION=3.10
+ARG TORCH_VERSION=2.1.2
 
 FROM --platform=$BUILDPLATFORM python:${PYTHON_VERSION}-slim-${DEBIAN_VERSION}
 
 ARG DETOXIFY_VERSION
+ARG FLASK_VERSION
+ARG TORCH_VERSION
 
 ARG BUILD_DEPS=" \
     build-essential \
-    cargo \
     cmake \
+    curl \
     git \
     libssl-dev \
     pkg-config \
-    python-setuptools \
+    python3-setuptools \
 "
 
 RUN apt update \
     && apt install -y ${BUILD_DEPS} \
+    && curl https://sh.rustup.rs -sSf | sh -s -- --profile minimal --default-toolchain stable -y \
+    && . "${HOME}/.cargo/env" \
     && pip install --upgrade pip \
-    && pip install --user --ignore-installed -f https://download.pytorch.org/whl/torch_stable.html \
+    && pip install --user --ignore-installed --extra-index-url https://download.pytorch.org/whl/cpu \
         detoxify==${DETOXIFY_VERSION} \
-        flask==2.2.2 \
-        torch==1.13.1+cpu \
-        transformers==4.22.1 \
+        flask==${FLASK_VERSION} \
+        torch==${TORCH_VERSION} \
+    && rustup self uninstall -y \
     && apt remove --purge -y ${BUILD_DEPS}
 
 RUN echo "Warming up" \
