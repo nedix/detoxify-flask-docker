@@ -36,7 +36,7 @@ jobs:
         run: echo "RENOVATE_BRANCH_NAME=${{ inputs.RENOVATE_BRANCH_NAME }}" >> $GITHUB_ENV
 
       - name: Renovate
-        uses: renovatebot/github-action@v39.2.4
+        uses: renovatebot/github-action@v40.1.12
         with:
           token: ${{ steps.renovate-app-token.outputs.token }}
         env:
