@@ -1,8 +1,10 @@
 # [detoxify]-[flask]-docker
 
-HTTP API for classifying toxicity of a text message.
+A container that serves an HTTP API that can be used to classify the toxicity of a text message.
 
 ## Usage
+
+### Preparation
 
 Run the following command to start the server on port `1234`.
 
@@ -11,6 +13,8 @@ docker run --pull always --rm --name detoxify-flask \
     -p 1234:80 \
     ghcr.io/nedix/detoxify-flask-docker
 ```
+
+### Commands
 
 Send a network request to classify the toxicity of a text message.
 
