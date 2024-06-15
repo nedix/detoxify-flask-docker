@@ -9,7 +9,7 @@ app = Flask(__name__)
 def detox():
     text = request.args.get('text')
 
-    results = Detoxify('original').predict(text)
+    results = Detoxify('multilingual').predict(text)
 
     return Response(str(results), mimetype='application/json')
 
