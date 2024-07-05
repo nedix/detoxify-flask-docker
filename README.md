@@ -4,7 +4,7 @@ A container that serves an HTTP API that can be used to classify the toxicity of
 
 ## Usage
 
-### Preparation
+### Start the container
 
 Run the following command to start the server on port `1234`.
 
@@ -14,7 +14,7 @@ docker run --pull always --rm --name detoxify-flask \
     ghcr.io/nedix/detoxify-flask-docker
 ```
 
-### Commands
+### Send commands over HTTP
 
 Send a network request to classify the toxicity of a text message.
 
