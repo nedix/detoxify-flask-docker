@@ -14,9 +14,9 @@ docker run --pull always --rm --name detoxify-flask \
     ghcr.io/nedix/detoxify-flask-docker
 ```
 
-### Send commands over HTTP
+### Send commands
 
-Send a network request to classify the toxicity of a text message.
+Dispatch an HTTP request to classify the toxicity of a given text message.
 
 ```shell
 curl '127.0.0.1:1234?text=foobar'
