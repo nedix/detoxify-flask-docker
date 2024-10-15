@@ -26,9 +26,9 @@ RUN apt update \
     && . "${HOME}/.cargo/env" \
     && pip install --upgrade pip \
     && pip install --user --ignore-installed --extra-index-url https://download.pytorch.org/whl/cpu \
-        detoxify==${DETOXIFY_VERSION} \
-        flask==${FLASK_VERSION} \
-        torch==${TORCH_VERSION} \
+        detoxify=="$DETOXIFY_VERSION" \
+        flask=="$FLASK_VERSION" \
+        torch=="$TORCH_VERSION" \
     && rustup self uninstall -y \
     && apt remove --purge -y ${BUILD_DEPS}
 
@@ -41,4 +41,4 @@ ENTRYPOINT ["/entrypoint.py"]
 
 STOPSIGNAL SIGINT
 
-EXPOSE 1234
+EXPOSE 80
