@@ -1,11 +1,6 @@
 {
-  baseBranches: [
-    "main",
-    "/^release\\/.*/",
-  ],
-  enabledManagers: [
-    "custom.regex",
-    "github-actions",
+  extends: [
+    "https://raw.githubusercontent.com/nedix/actions/main/renovate.json5",
   ],
   customManagers: [
     {
@@ -43,13 +38,6 @@
       matchStrings: ["ARG TORCH_VERSION=(?<currentValue>.*?)\\n"],
       datasourceTemplate: "pypi",
       packageNameTemplate: "torch"
-    },
-  ],
-  packageRules: [
-    {
-      description: "Disable grouping for all dependencies",
-      matchPackagePatterns: [".*"],
-      groupName: null,
     },
   ],
 }
