@@ -1,4 +1,4 @@
-# [detoxify]-[flask]-docker
+# [detoxify]-[flask]-container
 
 A container that serves an HTTP API that can be used to classify the toxicity of a text message.
 
