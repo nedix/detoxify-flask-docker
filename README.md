@@ -11,12 +11,12 @@ Run the following command to start the server on port `1234`.
 ```shell
 docker run --pull always --rm --name detoxify-flask \
     -p 1234:80 \
-    ghcr.io/nedix/detoxify-flask-docker
+    ghcr.io/nedix/detoxify-flask-container
 ```
 
-### Send commands
+### Dispatch commands
 
-Dispatch an HTTP request to classify the toxicity of a given text message.
+Dispatch a HTTP request to classify the toxicity of a text message.
 
 ```shell
 curl '127.0.0.1:1234?text=foobar'
