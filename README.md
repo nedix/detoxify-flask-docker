@@ -6,11 +6,11 @@ A container that serves an HTTP API that can be used to classify the toxicity of
 
 ### Start the container
 
-Run the following command to start the server on port `1234`.
+Run the following command to start the server on port `8080`.
 
 ```shell
 docker run --pull always --rm --name detoxify-flask \
-    -p 1234:80 \
+    -p 8080:80 \
     ghcr.io/nedix/detoxify-flask-container
 ```
 
@@ -19,7 +19,7 @@ docker run --pull always --rm --name detoxify-flask \
 Dispatch a HTTP request to classify the toxicity of a text message.
 
 ```shell
-curl '127.0.0.1:1234?text=foobar'
+curl '127.0.0.1:8080?text=foobar'
 ```
 
 ## Attribution
