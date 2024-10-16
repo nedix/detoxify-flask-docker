@@ -11,7 +11,7 @@ Run the following command to start the server on port `8080`.
 ```shell
 docker run --pull always --rm --name detoxify-flask \
     -p 8080:80 \
-    ghcr.io/nedix/detoxify-flask-container
+    nedix/detoxify
 ```
 
 ### Dispatch commands
