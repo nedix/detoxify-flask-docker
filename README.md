@@ -4,9 +4,9 @@ HTTP API to classify the toxicity of a text message.
 
 ## Usage
 
-### Start the container
+#### 1. Start the server
 
-Run the following command to start the server on port `8080`.
+This command starts the server on port `8080`.
 
 ```shell
 docker run --pull always --rm --name detoxify \
@@ -14,13 +14,15 @@ docker run --pull always --rm --name detoxify \
     nedix/detoxify
 ```
 
-### Request toxicity metrics
+### 2. Request toxicity information
 
-Send a HTTP request to classify the toxicity of a text message.
+This command sends a HTTP request that classifies the toxicity of a text message.
 
 ```shell
 curl '127.0.0.1:8080?text=foobar'
 ```
+
+<hr>
 
 ## Attribution
 

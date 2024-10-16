@@ -20,7 +20,7 @@ ARG BUILD_DEPS=" \
     python3-setuptools \
 "
 
-RUN apt update \
+RUN apt update -y \
     && apt install -y ${BUILD_DEPS} \
     && curl https://sh.rustup.rs -sSf | sh -s -- --profile minimal --default-toolchain stable -y \
     && . "${HOME}/.cargo/env" \
