@@ -9,7 +9,7 @@ HTTP API to classify the toxicity of a text message.
 Run the following command to start the server on port `8080`.
 
 ```shell
-docker run --pull always --rm --name detoxify-flask \
+docker run --pull always --rm --name detoxify \
     -p 8080:80 \
     nedix/detoxify
 ```

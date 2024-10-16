@@ -1,5 +1,6 @@
 setup:
-	@docker build . -t detoxify-flask
+	@docker build . -t detoxify
 
+up: PORT = 8080
 up:
-	@docker run --rm -p 1234:80 --name detoxify-flask detoxify-flask
+	@docker run --rm -p $(PORT):80 --name detoxify detoxify
