@@ -5,7 +5,7 @@
   customManagers: [
     {
       depNameTemplate: "Debian",
-      fileMatch: ["^Dockerfile$"],
+      fileMatch: ["^Containerfile$"],
       matchStrings: ["ARG DEBIAN_VERSION=(?<currentValue>.*?)\\n"],
       datasourceTemplate: "docker",
       packageNameTemplate: "debian",
@@ -13,28 +13,28 @@
     },
     {
       depNameTemplate: "Detoxify",
-      fileMatch: ["^Dockerfile$"],
+      fileMatch: ["^Containerfile$"],
       matchStrings: ["ARG DETOXIFY_VERSION=(?<currentValue>.*?)\\n"],
       datasourceTemplate: "pypi",
       packageNameTemplate: "detoxify"
     },
     {
       depNameTemplate: "Flask",
-      fileMatch: ["^Dockerfile$"],
+      fileMatch: ["^Containerfile$"],
       matchStrings: ["ARG FLASK_VERSION=(?<currentValue>.*?)\\n"],
       datasourceTemplate: "pypi",
       packageNameTemplate: "flask"
     },
     {
       depNameTemplate: "Python",
-      fileMatch: ["^Dockerfile$"],
+      fileMatch: ["^Containerfile$"],
       matchStrings: ["ARG PYTHON_VERSION=(?<currentValue>.*?)\\n"],
       datasourceTemplate: "docker",
       packageNameTemplate: "python"
     },
     {
       depNameTemplate: "Torch",
-      fileMatch: ["^Dockerfile$"],
+      fileMatch: ["^Containerfile$"],
       matchStrings: ["ARG TORCH_VERSION=(?<currentValue>.*?)\\n"],
       datasourceTemplate: "pypi",
       packageNameTemplate: "torch"

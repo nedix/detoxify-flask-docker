@@ -1,5 +1,5 @@
 setup:
-	@docker build -f Containerfile -t detoxify .
+	@docker build  --progress=plain -f Containerfile -t detoxify .
 
 up: PORT = 8080
 up:
