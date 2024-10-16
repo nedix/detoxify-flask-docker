@@ -14,9 +14,9 @@ docker run --pull always --rm --name detoxify \
     nedix/detoxify
 ```
 
-### Dispatch commands
+### Request toxicity metrics
 
-Dispatch a HTTP request to classify the toxicity of a text message.
+Send a HTTP request to classify the toxicity of a text message.
 
 ```shell
 curl '127.0.0.1:8080?text=foobar'
