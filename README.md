@@ -1,6 +1,6 @@
 # [detoxify-flask-container](https://github.com/nedix/detoxify-flask-container)
 
-HTTP API to classify the toxicity of a text message.
+HTTP API to classify the toxicity of text messages.
 
 ## Usage
 
