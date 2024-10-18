@@ -4,9 +4,9 @@ HTTP API to classify the toxicity of text messages.
 
 ## Usage
 
-#### 1. Start the server
+#### 1. Start the service
 
-This command starts the server on port `8080`.
+This command starts the service on port `8080`.
 
 ```shell
 docker run --pull always --rm --name detoxify \
