@@ -6,7 +6,7 @@ HTTP API to classify the toxicity of text messages.
 
 #### 1. Start the service
 
-This command starts the service on port `8080`.
+The following command starts the service on port `8080`.
 
 ```shell
 docker run --pull always --rm --name detoxify \
@@ -16,7 +16,7 @@ docker run --pull always --rm --name detoxify \
 
 ### 2. Request toxicity information
 
-This command sends a HTTP request that classifies the toxicity of a text message.
+The following command sends a HTTP request that classifies the toxicity of a text message.
 
 ```shell
 curl '127.0.0.1:8080?text=foobar'
